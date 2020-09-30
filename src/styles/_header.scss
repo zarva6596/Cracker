@@ -53,6 +53,7 @@
 
           &__icon {
             position: relative;
+            margin-right: 85px;
 
             &::after {
               content: "3";
@@ -67,6 +68,31 @@
               position: absolute;
               right: -12px;
               bottom: 14px;
+            }
+          }
+
+          &__price {
+            margin-right: 50px;
+          }
+
+          &__details {
+            margin-right: 65px;
+            position: relative;
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &::after {
+              content: "";
+              width: 16px;
+              height: 9px;
+              position: absolute;
+              background-image: url("../images/header/fa-angle-down.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              right: -35px;
+              transform: translateY(50%);
             }
           }
         }
@@ -145,9 +171,11 @@
         color: rgb(247, 247, 247);
         text-transform: uppercase;
         line-height: 1.25;
+        text-align: left;
         top: 30px;
-        left: 347px;
+        left: calc(321px + #{$padding-width});
         width: 100%;
+        letter-spacing: 3px;
       }
 
       &__text {
