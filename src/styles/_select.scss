@@ -27,7 +27,7 @@
         right: 34px;
         bottom: 50%;
         transform: translateY(50%);
-        transition: 0.2s;
+        transition: 0.5s;
       }
 
       &.open::after {
@@ -58,6 +58,7 @@
       width: 80%;
       padding: 10px 0;
       text-align: center;
+      margin: 0 auto;
 
       &:last-of-type {
         border-bottom: 0;

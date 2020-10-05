@@ -15,7 +15,7 @@
 
   &__sum {
     @include font-text;
-    margin-right: 153px;
+    margin-right: 130px;
     margin-bottom: -15px;
     font-size: 24px;
     color: rgb(51, 51, 51);
@@ -36,7 +36,7 @@
 
   &__range {
     width: 100%;
-    margin: 0 100px;
+    margin: 0 60px 0 100px;
     -webkit-appearance: none;
     outline: none;
     height: 4px;
@@ -87,6 +87,8 @@
 
   &__value {
     @include font-text;
+    width: 110px;
+    max-width: 100px;
     font-size: 30px;
     color: rgb(51, 51, 51);
     text-transform: uppercase;

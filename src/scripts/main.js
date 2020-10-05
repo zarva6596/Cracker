@@ -4,29 +4,95 @@
 const soybean = document.getElementById('soybean');
 const soybeanValue = document.getElementById('soybean__value');
 
-soybean.oninput = function() {
-  soybeanValue.innerText = this.value + '%';
-};
-
 const sesame = document.getElementById('sesame');
 const sesameValue = document.getElementById('sesame__value');
-
-sesame.oninput = function() {
-  sesameValue.innerText = this.value + '%';
-};
 
 const wheat = document.getElementById('wheat');
 const wheatValue = document.getElementById('wheat__value');
 
-wheat.oninput = function() {
-  wheatValue.innerText = this.value + '%';
-};
-
 const corn = document.getElementById('corn');
 const cornValue = document.getElementById('corn__value');
 
+let sum = 0;
+
+soybean.oninput = function() {
+  soybeanValue.innerText = this.value + '%';
+  corn.value = 100 - wheat.value - sesame.value - soybean.value;
+  cornValue.innerText = corn.value + '%';
+
+  sum = wheat.value - sesame.value - soybean.value + soybean.value;
+
+  if (sum > 100 || wheat.value > 0) {
+    wheat.value = 100 - corn.value - sesame.value - soybean.value;
+    wheatValue.innerText = wheat.value + '%';
+    sum = wheat.value - sesame.value - soybean.value + soybean.value;
+  }
+
+  if (sum > 100 || sesame.value > 0) {
+    sesame.value = 100 - corn.value - wheat.value - soybean.value;
+    sesameValue.innerText = sesame.value + '%';
+    sum = wheat.value - sesame.value - soybean.value + soybean.value;
+  }
+};
+
+sesame.oninput = function() {
+  sesameValue.innerText = this.value + '%';
+  corn.value = 100 - wheat.value - sesame.value - soybean.value;
+  cornValue.innerText = corn.value + '%';
+
+  sum = wheat.value - sesame.value - soybean.value + soybean.value;
+
+  if (sum > 100 || wheat.value > 0) {
+    wheat.value = 100 - corn.value - sesame.value - soybean.value;
+    wheatValue.innerText = wheat.value + '%';
+    sum = wheat.value - sesame.value - soybean.value + soybean.value;
+  }
+
+  if (sum > 100 || soybean.value > 0) {
+    soybean.value = 100 - corn.value - wheat.value - sesame.value;
+    soybeanValue.innerText = soybean.value + '%';
+    sum = wheat.value - sesame.value - soybean.value + soybean.value;
+  }
+};
+
+wheat.oninput = function() {
+  wheatValue.innerText = this.value + '%';
+  corn.value = 100 - wheat.value - sesame.value - soybean.value;
+  cornValue.innerText = corn.value + '%';
+
+  sum = wheat.value - sesame.value - soybean.value + soybean.value;
+
+  if (sum > 100 || sesame.value > 0) {
+    sesame.value = 100 - corn.value - wheat.value - soybean.value;
+    sesameValue.innerText = sesame.value + '%';
+    sum = wheat.value - sesame.value - soybean.value + soybean.value;
+  }
+
+  if (sum > 100 || soybean.value > 0) {
+    soybean.value = 100 - corn.value - wheat.value - sesame.value;
+    soybeanValue.innerText = soybean.value + '%';
+    sum = wheat.value - sesame.value - soybean.value + soybean.value;
+  }
+};
+
 corn.oninput = function() {
   cornValue.innerText = this.value + '%';
+  wheat.value = 100 - corn.value - sesame.value - soybean.value;
+  wheatValue.innerText = wheat.value + '%';
+
+  sum = wheat.value - sesame.value - soybean.value + soybean.value;
+
+  if (sum > 100 || sesame.value > 0) {
+    sesame.value = 100 - corn.value - wheat.value - soybean.value;
+    sesameValue.innerText = sesame.value + '%';
+    sum = wheat.value - sesame.value - soybean.value + soybean.value;
+  }
+
+  if (sum > 100 || soybean.value > 0) {
+    soybean.value = 100 - corn.value - wheat.value - sesame.value;
+    soybeanValue.innerText = soybean.value + '%';
+    sum = wheat.value - sesame.value - soybean.value + soybean.value;
+  }
 };
 
 jQuery(($) => {
@@ -70,8 +136,13 @@ jQuery(($) => {
 
   $(document).click(function(e) {
     if (!$(e.target).closest('.basket').length) {
-      $('.basked__head').removeClass('open');
-      $('.basked__kontent').fadeOut();
+      $('.basket__head').removeClass('open');
+      $('.basket__content').fadeOut();
     }
+  });
+
+  $('.basket').on('click', '.basket__top-close', function() {
+    $('.basket__head').removeClass('open');
+    $('.basket__content').fadeOut();
   });
 });
