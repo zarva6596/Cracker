@@ -5,9 +5,242 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="./styles/main.scss">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kristi&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    >
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <header class="header">
+      <div class="header__top">
+        <div class="top__top-line">
+          <a href="#" class="top__logo">
+            Cracker
+          </a>
+
+          <div class="top__basket-info">
+            <ul class="basket-info__list">
+              <li class="basket-info__item">
+                <a href="#" class="basket-info__link basket-info__icon">
+                  <img
+                    src="./images/semen.png"
+                    alt="basket icon"
+                  >
+                </a>
+              </li>
+
+              <li class="basket-info__item">
+                <a href="#" class="basket-info__link">Total: 143</a>
+              </li>
+
+              <li class="basket-info__item">
+                <a href="#" class="basket-info__link">Details</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+              <a
+                href=""
+                class="nav__link"
+              >
+                Home
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="" class="nav__link">About us</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="" class="nav__link">Contacts</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="" class="nav__link">Checkout</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="" class="nav__link">Account</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header__block">
+        <div class="block__info">
+          <h1 class="block__heading">
+            mostly tastes<br>
+            with freshes
+          </h1>
+
+          <p class="block__text">
+            Lorem ipsum dolor sit amet,<br>
+            consectetur adipisicing elit, sed do<br>
+            eiusmod tempor incididunt ut labore<br>
+            et dolore magna aliqua.<br>
+            Lorem ipsum dolor sit amet,
+          </p>
+        </div>
+
+        <a href="" class="block__button">
+          taste it
+        </a>
+      </div>
+    </header>
+
+    <section class="about">
+      <div class="about__info">
+        <img
+          src="./images/crecker.png"
+          alt="Photo cracker"
+          class="about__image"
+        >
+        <h2 class="about__heading">
+          About Cracker
+        </h2>
+      </div>
+
+      <div class="about__text-block">
+        <p class="about__text">
+          <span class="about__tab"></span>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat, sunt in culpa qui officia deserunt mollit anim id
+          est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, architecto beatae vitae dicta sunt
+          explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
+          ut labore et dolore magnam aliquam quaerat voluptatem.
+        </p>
+      </div>
+
+      <div class="about__constructor constructor">
+        <h2 class="constructor__heading">
+          Cracker constructor
+        </h2>
+        <div class="constructor__calculate">
+          <ul class="constructor__list">
+            <li class="constructor__item">
+              <img
+                src="./images/constructor icon/soybean.png"
+                alt="soybean soybean"
+                class="constructor__icon"
+              >
+              <input
+                type="range"
+                class="constructor__range soybean"
+                value="10"
+                min="0"
+                max="100"
+              >
+              <p class="constructor__value">10%</p>
+            </li>
+
+            <li class="constructor__item">
+              <img
+                src="./images/constructor icon/sesame.png"
+                alt="sesame icon"
+                class="constructor__icon"
+              >
+              <input
+                type="range"
+                class="constructor__range sesame"
+                value="36"
+                min="0"
+                max="100"
+              >
+              <p class="constructor__value">36%</p>
+            </li>
+
+            <li class="constructor__item">
+              <img
+                src="./images/constructor icon/wheat.png"
+                alt="wheat icon"
+                class="constructor__icon"
+              >
+              <input
+                type="range"
+                class="constructor__range wheat"
+                value="14"
+                min="0"
+                max="100"
+              >
+              <p class="constructor__value">14%</p>
+            </li>
+
+            <li class="constructor__item">
+              <img
+                src="./images/constructor icon/corn.png"
+                alt="corn icon"
+                class="constructor__icon"
+              >
+              <input
+                type="range"
+                class="constructor__range corn"
+                value="40"
+                min="0"
+                max="100"
+              >
+              <p class="constructor__value">40%</p>
+            </li>
+
+            <li class="constructor__item">
+              <img
+                src="./images/constructor icon/pacage.png"
+                alt="pacage icon"
+                class="constructor__icon"
+              >
+              <select
+                class="constructor__select"
+              >
+                <option
+                  class="select__item"
+                >
+                  Choose your pack
+                </option>
+
+                <option
+                  class="select__item"
+                >
+                  small pack
+                </option>
+
+                <option
+                  class="select__item"
+                >
+                  medium pack
+                </option>
+
+                <option
+                  class="select__item"
+                >
+                  large pack
+                </option>
+              </select>
+            </li>
+          </ul>
+
+          <button
+            type="button"
+            class="constructor__button"
+          >
+          </button>
+        </div>
+      </div>
+    </section>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

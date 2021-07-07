@@ -1,0 +1,113 @@
+.constructor {
+  padding: 80px $padding-width 125px;
+  text-align: right;
+
+  &__heading {
+    text-align: center;
+    @include font-head;
+    font-size: 48px;
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.25;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:last-of-type {
+      justify-content: flex-start;
+    }
+  }
+
+  &__range {
+    width: 100%;
+    margin: 0 100px;
+    -webkit-appearance: none;
+    outline: none;
+    height: 4px;
+    border-radius: 2px;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 1);
+      cursor: pointer;
+    }
+  }
+
+  .soybean {
+    background-color: rgb(0, 166, 81);
+
+    &::-webkit-slider-thumb {
+      border: 2px solid rgb(0, 166, 81);
+    }
+  }
+
+  .sesame {
+    background-color: #49743f;
+
+    &::-webkit-slider-thumb {
+      border: 2px solid #49743f;
+    }
+  }
+
+  .wheat {
+    background-color: #aba000;
+
+    &::-webkit-slider-thumb {
+      border: 2px solid #aba000;
+    }
+  }
+
+  .corn {
+    background-color: #999796;
+
+    &::-webkit-slider-thumb {
+      border: 2px solid #999796;
+    }
+  }
+
+  &__value {
+    @include font-text;
+    font-size: 30px;
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  &__select {
+    @include font-head;
+    margin: 0 100px;
+    padding: 20px 80px;
+    border-radius: 35px;
+    border: 1px solid rgb(255, 66, 0);
+    font-size: 24px;
+    color: rgb(255, 66, 0);
+    text-transform: uppercase;
+    line-height: 1;
+    outline: none;
+  }
+
+  &__button {
+    color: #fff;
+    background-image: url("../images/constructor icon/Shape.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    background-color: rgb(255, 66, 0);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12), 0 6px 6px 0 rgba(0, 0, 0, 0.24);
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-right: 25px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
