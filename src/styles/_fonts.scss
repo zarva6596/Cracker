@@ -4,3 +4,16 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@mixin font-cursive {
+  font-family: "Kristi", cursive;
+}
+
+@mixin font-head {
+  font-family: "Fredoka One", cursive;
+  font-weight: normal;
+}
+
+@mixin font-text {
+  font-family: "Lato", sans-serif;
+}

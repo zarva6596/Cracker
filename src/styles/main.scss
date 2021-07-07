@@ -1,7 +1,12 @@
 @import "utils";
 @import "fonts";
+@import "reset";
+@import "mixins";
+@import "variables";
 @import "typography";
-
-body {
-  background: $c-gray;
-}
+@import "header";
+@import "about-crecker";
+@import "constructor-crecker";
+@import "footer";
+@import "select";
+@import "basket";
